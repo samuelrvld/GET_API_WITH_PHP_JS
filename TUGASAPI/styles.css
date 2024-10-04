@@ -1,39 +1,68 @@
+/* Mengatur tampilan dasar halaman */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font yang modern */
+    background-color: #f0f2f5; /* Warna latar belakang lembut */
     margin: 0;
     padding: 20px;
 }
 
+/* Heading utama */
 h1 {
     text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2.5rem; /* Ukuran font lebih besar */
+    text-transform: uppercase; /* Membuat semua huruf menjadi kapital */
+    letter-spacing: 1px; /* Jarak antar huruf */
 }
 
+/* Tabel */
 table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: collapse; /* Menghilangkan garis ganda antara sel */
     margin: 20px 0;
-    background-color: #fff;
+    background-color: #fff; /* Warna latar belakang tabel */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
+    border-radius: 8px; /* Sudut tabel yang membulat */
+    overflow: hidden; /* Menghindari efek overflow pada sudut yang membulat */
 }
 
-table, th, td {
-    border: 1px solid #ddd;
-}
-
-th, td {
+/* Header tabel */
+table th, table td {
+    border: 1px solid #ddd; /* Border sel */
     padding: 12px;
     text-align: left;
 }
 
-th {
-    background-color: #4CAF50;
-    color: white;
+/* Gaya khusus untuk header */
+table th {
+    background-color: #4CAF50; /* Warna hijau untuk header */
+    color: white; /* Warna teks putih */
+    font-weight: bold; /* Tebal untuk header */
+    text-align: center; /* Tengah untuk header */
 }
 
-tr:nth-child(even) {
-    background-color: #f2f2f2;
+/* Baris tabel dengan warna bergantian */
+table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Warna latar belakang untuk baris genap */
 }
 
-tr:hover {
-    background-color: #ddd;
+/* Hover pada baris tabel */
+table tr:hover {
+    background-color: #f1f1f1; /* Warna ketika hover */
+    transform: scale(1.02); /* Efek zoom saat hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transisi yang halus */
+}
+
+/* Responsif untuk tampilan kecil */
+@media (max-width: 600px) {
+    body {
+        padding: 10px; /* Padding lebih kecil pada perangkat kecil */
+    }
+    h1 {
+        font-size: 1.8rem; /* Ukuran font lebih kecil */
+    }
+    table th, table td {
+        padding: 10px; /* Padding lebih kecil pada sel */
+    }
 }

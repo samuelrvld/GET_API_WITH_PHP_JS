@@ -1,11 +1,9 @@
 <?php
-// URL API
-$urI  =  'https://jsonplaceholder.typicode.com/posts';
+// URL API untuk mengambil data posts
+$apiUrl = 'https://jsonplaceholder.typicode.com/posts';
 
 // Mengambil data dari API
-$response = file_get_contents($urI);
-
-// Mengubah data JSON menjadi array asosiatif
+$response = file_get_contents($apiUrl);
 $data = json_decode($response, true);
 ?>
 
